@@ -3,141 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>心海 | AI Agent 学习者</title>
+    <title>心海 | AI 自媒体</title>
+    <link rel="icon" type="image/x-icon" href="./bitbug_favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        dark: '#121212',
-                        accent: '#6366f1'
+                        primary: '#5B21B6',
+                        secondary: '#7C3AED',
                     }
                 }
             }
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
-        body {
-            font-family: 'Noto Sans SC', sans-serif;
-            background-color: #121212;
-            color: #ffffff;
-        }
-        .gradient-text {
-            background: linear-gradient(45deg, #6366f1, #8b5cf6);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .hover-up {
-            transition: transform 0.3s ease;
-        }
-        .hover-up:hover {
-            transform: translateY(-5px);
+        .gradient-bg {
+            background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
         }
     </style>
 </head>
-<body class="bg-dark">
+<body class="bg-gray-50">
     <!-- Hero Section -->
-    <header class="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-dark z-0"></div>
-        <div class="container mx-auto px-4 z-10">
-            <div class="text-center">
-                <h1 class="text-6xl md:text-7xl font-bold mb-6 gradient-text">WE LEARN</h1>
-                <h2 class="text-4xl md:text-5xl font-bold mb-8">WORLD-CLASS AI PRODUCTS</h2>
-                <p class="text-xl text-gray-300 max-w-2xl mx-auto">AI Agent 学习者 · 数字游民 · 开源社区参与者 · 效率革命推动者</p>
+    <div class="gradient-bg min-h-screen text-white">
+        <div class="container mx-auto px-4 py-16">
+            <nav class="flex justify-between items-center mb-16">
+                <div class="text-2xl font-bold">心海</div>
+                <div class="space-x-6">
+                    <a href="#about" class="hover:text-purple-200">关于我</a>
+                    <a href="#works" class="hover:text-purple-200">作品展示</a>
+                    <a href="#contact" class="hover:text-purple-200">联系方式</a>
+                </div>
+            </nav>
+            
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">AI 自媒体新人</h1>
+                    <p class="text-xl mb-8">全网粉丝1000+ | 技术分享 | AI内容创作</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-purple-100 transition">联系我</a>
+                        <a href="#works" class="border-2 border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition">查看作品</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-8 md:mt-0">
+                    <img src="./myImage.png" alt="个人照片" class="rounded-lg shadow-xl object-cover w-full">
+                </div>
             </div>
         </div>
-    </header>
+    </div>
 
     <!-- About Section -->
-    <section class="py-20 bg-black/50">
+    <section id="about" class="py-20">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 text-center">关于我</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <img src="https://picsum.photos/800/600?random=1" alt="Profile" class="rounded-lg shadow-xl">
+            <h2 class="text-3xl font-bold text-center mb-12">关于我</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <p class="text-lg mb-6">
+                    曾致力于做无偿技术分享教学，这是我粉丝的主要来源。现全心拥抱AI（包括AI写作、AI绘画、AI视频、AI数字人、AI音乐等多个自媒体赛道，以及AI编程等提效领域）。
+                </p>
+                <p class="text-lg mb-6">
+                    现致力于以教代学，通过AI辅助编写高质量技术博文，CSDN社区粉丝量逐渐上升。将继续深耕AI自媒体，努力尽早打造出高质量个人IP。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">作品展示</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Work Item 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./svm.png" alt="Project 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">支持向量机详解</h3>
+                        <p class="text-gray-600 mb-4">手把手教你理解支持向量机（SVM）：从"分界线"到"核魔法"</p>
+                        <a href="https://blog.csdn.net/weixin_66485800/article/details/146500194" class="text-primary hover:text-secondary" target="_blank">阅读更多</a>
+                    </div>
                 </div>
-                <div class="space-y-6">
-                    <h3 class="text-2xl font-bold gradient-text">心海</h3>
-                    <p class="text-gray-300">未来字节跳动AI产品经理，参与豆包/剪映/扣子底层模型能力测试。现AI智能体培训讲师学员，已有3000+学员认证。独立产品经理是我的目标。</p>
-                    <div class="flex flex-wrap gap-4">
-                        <span class="px-4 py-2 bg-accent/10 rounded-full text-accent">AI Agent</span>
-                        <span class="px-4 py-2 bg-accent/10 rounded-full text-accent">产品经理</span>
-                        <span class="px-4 py-2 bg-accent/10 rounded-full text-accent">开源社区</span>
+
+                <!-- Work Item 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./word.png" alt="Project 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">豆包单词记忆大师</h3>
+                        <p class="text-gray-600 mb-4">AI辅助记忆单词工具</p>
+                        <a href="https://doubao.com/bot/xgtswVOX" class="text-primary hover:text-secondary" target="_blank">查看项目</a>
+                    </div>
+                </div>
+
+                <!-- Work Item 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="./gemini.png" alt="Project 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">谷歌Gemini 2 flash详解</h3>
+                        <p class="text-gray-600 mb-4">深入解析Gemini 2 flash技术特点</p>
+                        <a href="https://blog.csdn.net/weixin_66485800/article/details/146281965" class="text-primary hover:text-secondary" target="_blank">阅读更多</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="py-20">
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 text-center">作品展示</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project Card 1 -->
-                <div class="bg-black/30 rounded-lg p-6 hover-up">
-                    <img src="https://picsum.photos/400/300?random=2" alt="Project 1" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-bold mb-2" >逻辑回归算法解析工具</h3>
-                    <p class="text-gray-400">深度学习算法可视化与解析工具</p>
-                </div>
-                <!-- Project Card 2 -->
-                <div class="bg-black/30 rounded-lg p-6 hover-up">
-                    <img src="https://picsum.photos/400/300?random=3" alt="Project 2" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-bold mb-2">决子-AI辅助决策工具</h3>
-                    <a class="text-gray-400" href="https://www.baidu.com">智能决策支持系统</a>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="bg-black/30 rounded-lg p-6 hover-up">
-                    <img src="https://picsum.photos/400/300?random=4" alt="Project 3" class="rounded-lg mb-4">
-                    <h3 class="text-xl font-bold mb-2">Agent 智能体指北</h3>
-                    <p class="text-gray-400">AI智能体开发指南</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Links -->
-    <section class="py-20 bg-black/50">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold mb-12 text-center">社交媒体</h2>
-            <div class="flex flex-wrap justify-center gap-8">
-                <a href="https://space.bilibili.com/421849618" class="flex items-center gap-2 text-gray-300 hover:text-accent">
-                    <i class="fab fa-bilibili text-2xl"></i>
-                    <span>Bilibili</span>
+            <h2 class="text-3xl font-bold text-center mb-12">联系方式</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a href="https://blog.csdn.net/weixin_66485800" target="_blank" class="flex items-center justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
+                    <i class="fas fa-code text-2xl text-primary mr-3"></i>
+                    <span>CSDN博客</span>
                 </a>
-                <a href="https://www.okjk.co/" class="flex items-center gap-2 text-gray-300 hover:text-accent">
-                    <i class="fas fa-comment text-2xl"></i>
-                    <span>即刻</span>
-                </a>
-                <a href="#" class="flex items-center gap-2 text-gray-300 hover:text-accent">
-                    <i class="fab fa-weixin text-2xl"></i>
-                    <span>xinhai3999</span>
+                <div class="flex items-center justify-center p-6 bg-white rounded-lg shadow-lg">
+                    <i class="fab fa-weixin text-2xl text-primary mr-3"></i>
+                    <span>微信: linxinhai</span>
+                </div>
+                <div class="flex items-center justify-center p-6 bg-white rounded-lg shadow-lg">
+                    <i class="fas fa-comment text-2xl text-primary mr-3"></i>
+                    <span>公众号: 思想摆渡的心海</span>
+                </div>
+                <a href="https://www.xiaohongshu.com/user/profile/5e58d1350000000001000b75" target="_blank" class="flex items-center justify-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
+                    <i class="fas fa-book text-2xl text-primary mr-3"></i>
+                    <span>小红书主页</span>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 bg-black text-center">
-        <div class="container mx-auto px-4">
-            <p class="text-gray-500">&copy; 2024 心海. All rights reserved.</p>
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 心海 | AI自媒体. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Add smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html> 
